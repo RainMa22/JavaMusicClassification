@@ -26,7 +26,7 @@ public class Main {
     }
     private static void startApplication(String[] args){
         if (args.length == 0) args = new String[]{""};
-        MusicPreprocessor preprocessor = new MusicPreprocessor(pathToFFMPEG);
+        FFMPEGExtractor preprocessor = new FFMPEGExtractor(pathToFFMPEG);
         switch (args[0].toLowerCase()){
             case "train":
                 //start preprocessing dataset

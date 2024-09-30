@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 // a music preprocessor class that processes music files to the pcm_f32le using ffmpeg
-public class MusicPreprocessor {
+public class FFMPEGExtractor {
     private static final byte NUM_CHANNEL = 1;
     private static final String CODEC_NAME = "pcm_f32le";
     private static final int SAMPLE_RATE = 44100;
@@ -30,7 +30,7 @@ public class MusicPreprocessor {
      *
      * @param pathToFFMPEG path to FFMPEG
      **/
-    public MusicPreprocessor(String pathToFFMPEG) {
+    public FFMPEGExtractor(String pathToFFMPEG) {
         builder = new ProcessBuilder(pathToFFMPEG);
     }
 
