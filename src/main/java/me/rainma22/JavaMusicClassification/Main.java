@@ -5,9 +5,8 @@ import java.util.Scanner;
 import static me.rainma22.JavaMusicClassification.utils.ProcessUtils.isProgramRunnable;
 
 public class Main {
-
+    private static String pathToFFMPEG = "ffmpeg";
     public static void main(String[] args) {
-        String pathToFFMPEG = "ffmpeg";
         boolean shouldExit = false;
 
         while (!shouldExit) {
@@ -27,6 +26,7 @@ public class Main {
     }
     private static void startApplication(String[] args){
         if (args.length == 0) args = new String[]{""};
+        MusicPreprocessor preprocessor = new MusicPreprocessor(pathToFFMPEG);
         switch (args[0].toLowerCase()){
             case "train":
                 //start preprocessing dataset
