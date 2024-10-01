@@ -1,4 +1,4 @@
-package me.rainma22.JavaMusicClassification;
+package me.rainma22.JavaMusicClassification.preprocessing;
 
 import javax.sound.sampled.AudioFormat;
 import java.io.IOException;
@@ -40,6 +40,7 @@ public class FFMPEGExtractor {
      * REQUIRES file indicated by pathToInput to be a file readable by FFMPEG;
      *
      * @param pathToInput path to the Input file
+     * @throws IOException if failed to start ffmpeg process
      **/
     public InputStream turnIntoStream(String pathToInput) throws IOException {
         builder.command("-i", pathToInput);

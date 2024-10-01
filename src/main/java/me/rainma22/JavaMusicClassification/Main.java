@@ -1,5 +1,7 @@
 package me.rainma22.JavaMusicClassification;
 
+import me.rainma22.JavaMusicClassification.preprocessing.FFMPEGExtractor;
+
 import java.util.Scanner;
 
 import static me.rainma22.JavaMusicClassification.utils.ProcessUtils.isProgramRunnable;
@@ -26,7 +28,7 @@ public class Main {
     }
     private static void startApplication(String[] args){
         if (args.length == 0) args = new String[]{""};
-        FFMPEGExtractor preprocessor = new FFMPEGExtractor(pathToFFMPEG);
+        FFMPEGExtractor extractor = new FFMPEGExtractor(pathToFFMPEG);
         switch (args[0].toLowerCase()){
             case "train":
                 //start preprocessing dataset

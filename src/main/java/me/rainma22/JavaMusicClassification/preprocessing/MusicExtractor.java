@@ -1,4 +1,4 @@
-package me.rainma22.JavaMusicClassification;
+package me.rainma22.JavaMusicClassification.preprocessing;
 
 import javax.sound.sampled.AudioFormat;
 import java.io.IOException;
